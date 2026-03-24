@@ -1,10 +1,16 @@
-const express = require('express');
+import express from 'express';
+import {
+  getAllProducao,
+  createProducao,
+  updateProducao,
+  deleteProducao,
+} from '../controllers/producaoController.js';
+
 const router = express.Router();
-const producaoController = require('../controllers/producaoController');
 
-router.get('/producao', producaoController.getAllProducao);
-router.post('/producao', producaoController.createProducao);
-router.put('/producao/:id', producaoController.updateProducao);
-router.delete('/producao/:id', producaoController.deleteProducao);
+router.get('/producao', getAllProducao);
+router.post('/producao', createProducao);
+router.put('/producao/:id', updateProducao);
+router.delete('/producao/:id', deleteProducao);
 
-module.exports = router;
+export default router;

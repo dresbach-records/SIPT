@@ -1,10 +1,16 @@
-const express = require('express');
+import express from 'express';
+import {
+  getAllEstoque,
+  createEstoque,
+  updateEstoque,
+  deleteEstoque,
+} from '../controllers/estoqueController.js';
+
 const router = express.Router();
-const estoqueController = require('../controllers/estoqueController');
 
-router.get('/estoque', estoqueController.getAllEstoque);
-router.post('/estoque', estoqueController.createEstoque);
-router.put('/estoque/:id', estoqueController.updateEstoque);
-router.delete('/estoque/:id', estoqueController.deleteEstoque);
+router.get('/estoque', getAllEstoque);
+router.post('/estoque', createEstoque);
+router.put('/estoque/:id', updateEstoque);
+router.delete('/estoque/:id', deleteEstoque);
 
-module.exports = router;
+export default router;

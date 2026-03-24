@@ -1,10 +1,16 @@
-const express = require('express');
+import express from 'express';
+import {
+  getAllCortes,
+  createCorte,
+  updateCorte,
+  deleteCorte,
+} from '../controllers/corteController.js';
+
 const router = express.Router();
-const corteController = require('../controllers/corteController');
 
-router.get('/corte', corteController.getAllCortes);
-router.post('/corte', corteController.createCorte);
-router.put('/corte/:id', corteController.updateCorte);
-router.delete('/corte/:id', corteController.deleteCorte);
+router.get('/corte', getAllCortes);
+router.post('/corte', createCorte);
+router.put('/corte/:id', updateCorte);
+router.delete('/corte/:id', deleteCorte);
 
-module.exports = router;
+export default router;

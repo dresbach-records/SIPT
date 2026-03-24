@@ -1,8 +1,8 @@
-const express = require('express');
-const loteRoutes = require('./routes/loteRoutes');
-const corteRoutes = require('./routes/corteRoutes');
-const producaoRoutes = require('./routes/producaoRoutes');
-const estoqueRoutes = require('./routes/estoqueRoutes');
+import express from 'express';
+import loteRoutes from './routes/loteRoutes.js';
+import corteRoutes from './routes/corteRoutes.js';
+import producaoRoutes from './routes/producaoRoutes.js';
+import estoqueRoutes from './routes/estoqueRoutes.js';
 
 const app = express();
 const port = 3000;
