@@ -1,12 +1,19 @@
-import express from 'express';
+const express = require('express');
+const loteRoutes = require('./routes/loteRoutes');
+const corteRoutes = require('./routes/corteRoutes');
+const producaoRoutes = require('./routes/producaoRoutes');
+const estoqueRoutes = require('./routes/estoqueRoutes');
+
 const app = express();
+const port = 3000;
 
-app.get('/', (req, res) => {
-  const name = process.env.NAME || 'World';
-  res.send(`Hello ${name}!`);
-});
+app.use(express.json());
 
-const port = parseInt(process.env.PORT) || 3000;
+app.use('/api', loteRoutes);
+app.use('/api', corteRoutes);
+app.use('/api', producaoRoutes);
+app.use('/api', estoqueRoutes);
+
 app.listen(port, () => {
-  console.log(`listening on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
