@@ -1,4 +1,5 @@
 import express from 'express';
+import 'dotenv/config';
 import loteRoutes from './routes/loteRoutes.js';
 import corteRoutes from './routes/corteRoutes.js';
 import producaoRoutes from './routes/producaoRoutes.js';
