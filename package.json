@@ -7,14 +7,21 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
   },
   "author": "Google LLC",
   "license": "Apache-2.0",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "pg": "^8.20.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-node": "^11.1.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.8.1"
   }
 }
